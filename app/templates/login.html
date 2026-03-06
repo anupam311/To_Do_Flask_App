@@ -1,0 +1,50 @@
+<!--/app/templates/login.html-->
+
+{% extends "base.html" %}
+
+{% block title %}Login - To-Do App{% endblock %}
+
+{% block content_links_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+
+      <!-- Toast Message -->
+      <div class="toast">
+        {{ message }}
+      </div>
+
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<div class="login-box">
+    <h2>Login</h2>
+    <form onsubmit="loginUser(event)">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class = "login-button">Login</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block content_links_js %}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+<script>
+setTimeout(() => {
+    const toast = document.querySelector('.toast');
+    if (toast) toast.remove();
+}, 3000);
+</script>
+{% endblock %}

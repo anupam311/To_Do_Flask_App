@@ -1,0 +1,60 @@
+<!--/app/templates/base.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}To-Do App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block content_links_css %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <h1>To-Do App</h1>
+        <nav>
+            {% if 'user_id' in session %}
+                <a href="{{ url_for('auth.logout') }}">Logout</a>
+            {% else %}
+                {% if request.endpoint == 'auth.register' %} {# The above condition ensures that the login link is not shown on the login page itself #}
+                    <a href="{{ url_for('auth.login') }}">Login</a>
+
+                {% elif request.endpoint == 'auth.login' %} {# The above condition ensures that the register link is not shown on the login page itself #}
+                    <a href="{{ url_for('auth.register') }}">Register</a>
+                {% endif %}
+
+            {% endif %}
+           
+        </nav> 
+    </header>
+
+    <main class="container">
+        <div id="toast" role="alert"></div>
+        {% block content %}{% endblock %}
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 To-Do App. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+
+    {% block content_links_js %}
+    {% endblock %}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const message = sessionStorage.getItem("toastMessage");
+            const type = sessionStorage.getItem("toastType");
+
+            if (message) {
+                showToast(message, type);
+                sessionStorage.removeItem("toastMessage");
+                sessionStorage.removeItem("toastType");
+            }
+        });
+    </script>
+</body>
+</html>

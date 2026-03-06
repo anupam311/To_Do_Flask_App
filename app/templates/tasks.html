@@ -1,0 +1,40 @@
+<!--/app/templates/tasks.html-->
+
+{% extends "base.html" %}
+
+{% block title %} Tasks {% endblock %}
+
+{% block content_links_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tasks.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class = "tasks-box">
+
+    <div class="add_new_task">
+    <h3>Add a New Task</h3>
+    <form id="add-task-form" class="add-task-form" onsubmit="addTask(event)">
+        <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Task title" required>
+        </div>
+
+        <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" placeholder="Task description" required>
+        </div>
+
+        <button type="submit" class="add-button">Add Task</button>
+    </form>
+    </div>
+
+    <div class="task-list">
+        <p>No task found. Add a new task to get started.</p>
+    </div>
+    
+</div>
+{% endblock%}
+
+{% block content_links_js %}
+<script src="{{ url_for('static', filename='js/tasks.js') }}"></script>
+{% endblock %}

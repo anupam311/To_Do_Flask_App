@@ -1,0 +1,40 @@
+.login-box, .register-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%-60px;
+    margin: 15px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-button, .register-button{
+    background-color: #4caf50;
+}
+
+/* Toast styling */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
