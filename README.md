@@ -88,17 +88,32 @@ https://to-do-flask-app-4vev.onrender.com
 ```
 To_Do_Flask_App
 │
-├── static
-│   ├── css
-│   └── js
-│       └── tasks.js
+├── app/
+│   │
+│   ├── routes
+│   │   ├── auth.py
+│   │   └── tasks.py
+│   │
+│   ├── static
+│   │   ├── css
+│   │   └── js
+│   │       ├── login.js
+│   │       ├── register.js
+│   │       ├── tasks.js
+│   │       └── toast.js
+│   │
+│   ├── templates
+│   │   ├── base.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   └── tasks.html
+│   │
+│   ├── __init__.py
+│   └── models.py
 │
-├── templates
-│   ├── login.html
-│   ├── register.html
-│   └── dashboard.html
-│
-├── app.py
+├── screenshots/
+├── run.py
+├── config.py
 ├── requirements.txt
 └── README.md
 ```
