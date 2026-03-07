@@ -15,29 +15,29 @@ https://to-do-flask-app-4vev.onrender.com
 ## 📸 Screenshots
 
 ### Register Page
-![Register Page](screenshots/(1)Register.png)
+![register-page.png](screenshots/(1)Register.png)
 
 ### Registration successful
-![Registration Successful](screenshots/(2)Registration-successful.png)
+![registration-successful.png](screenshots/(2)Registration-successful.png)
 
 ### Login Page
-![Login Page](screenshots/(3)Login.png)
+![login-page.png](screenshots/(3)Login.png)
 
 ### Login successful
-![Login Successful](screenshots/(4)Login-successful.png)
+![login-successful.png](screenshots/(4)Login-successful.png)
 
 ### Adding Tasks
-![Before Adding](screenshots/(5)Adding%20task-1.png)
-![After Adding](screenshots/(8)Adding%20task-2-done.png)
+![before-adding-tasks.png](screenshots/(5)Adding%20task-1.png)
+![after-adding-tasks.png](screenshots/(8)Adding%20task-2-done.png)
 
 ### Task Management
-![Toggle Status](screenshots/(9)toggle%20status.png)
-![Delete Tasks](screenshots/(10)Delete%20task.png)
-![Edit Task](screenshots/(11)Edit%20task.png)
-![Clear All Tasks](screenshots/(13)All%20tasks%20cleared.png)
+![toggle-status.png](screenshots/(9)toggle%20status.png)
+![delete-tasks.png](screenshots/(10)Delete%20task.png)
+![edit-task.png](screenshots/(11)Edit%20task.png)
+![clear-all-tasks.png](screenshots/(13)All%20tasks%20cleared.png)
 
 ### Logout
-![Logout](screenshots/(14)Logged%20out.png)
+![logout.png](screenshots/(14)Logged%20out.png)
 
 ---
 
